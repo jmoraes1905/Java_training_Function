@@ -23,12 +23,8 @@ public class Product {
 		this.price = price;
 	}
 	
-	public static void staticPriceUpdate(Product p) { //Static methods require own object argument to work with
-		 p.setPrice(p.getPrice()*1.10);
-	}
-	
-	public void nonStaticPriceUpdate() {// non static methods work wit the same object in which it's defined, therefore we don't pass a Product as argument 
-		this.setPrice(this.getPrice()*1.10);
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
 	}
 	
 	@Override
