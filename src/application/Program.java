@@ -26,9 +26,9 @@ public class Program {
 		// map method applies one function to all elements of a stream
 		// .collect(Collectors.toList()) converts stream type back to list type
 		
-		Function<Product,String> function = p -> p.getName().toUpperCase();
+		//Function<Product,String> function = p -> p.getName().toUpperCase();
 
-		List<String> names = list.stream().map(function).collect(Collectors.toList()); // Reference to non static method
+		List<String> names = list.stream().map( p -> p.getName().toUpperCase()).collect(Collectors.toList()); 
 		
 		names.forEach(System.out::println); //This is a reference method for println
 	}
